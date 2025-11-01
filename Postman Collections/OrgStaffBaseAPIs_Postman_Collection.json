@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "40711935-f699-433e-8808-31f9fe6e3cfd",
+		"name": "OrgStaffBaseAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get employees",
+			"item": [
+				{
+					"name": "Get employees",
+					"id": "9a45a3ee-acea-44fe-944f-e177acd84140",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseURL}}/employees"
+					},
+					"response": []
+				}
+			],
+			"id": "1d70b0ae-b45b-4cf5-8d9f-c6bde994a95d"
+		},
+		{
+			"name": "Get employee details",
+			"item": [
+				{
+					"name": "Get employee details",
+					"id": "bc35e6d8-8cb0-4a84-b0a1-a93a564e9cf4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/employees/:id",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7497629a-5d85-4192-9d60-7b64cafc3659"
+		},
+		{
+			"name": "Create employee",
+			"item": [
+				{
+					"name": "Create employee",
+					"id": "60efc4b3-1b24-4f2c-84e5-afb0086ecfdf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"100\",\r\n    \"firstName\": \"Gustave\",\r\n    \"lastName\": \"Flaubert\",\r\n    \"email\": \"Gustave.Flaubert@example.org\",\r\n    \"jobTitle\": \"QA Department Head\",\r\n    \"department\": \"Quality Assurance\",\r\n    \"birthDate\": \"1970-09-02T21:38:45.492Z\",\r\n    \"salary\": \"1000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURL}}/employees"
+					},
+					"response": []
+				}
+			],
+			"id": "f2434e73-4d1d-4a93-9bbe-f42feebd3d6e"
+		},
+		{
+			"name": "Update employee",
+			"item": [
+				{
+					"name": "Update employee",
+					"id": "14f5cacd-8cbd-4eaf-8472-16edea534c99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salary\": \"2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/employees/:id",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "a45b9507-0f0f-4af2-aa66-a5bd80cae66d"
+		},
+		{
+			"name": "Delete emloyee",
+			"item": [
+				{
+					"name": "Delete employee",
+					"id": "6f5e0866-df88-45a3-9f35-752da0bc4761",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salary\": \"2000\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BaseURL}}/employees/:id",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "07ce57a8-b000-4801-946c-312e110e06bb"
+		}
+	]
+}
