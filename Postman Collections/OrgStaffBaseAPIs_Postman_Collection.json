@@ -30,6 +30,20 @@
 								},
 								"requests": {}
 							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b38c43e7-975d-450a-b6bf-27f028cecd28",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
 						}
 					],
 					"id": "9a45a3ee-acea-44fe-944f-e177acd84140",
