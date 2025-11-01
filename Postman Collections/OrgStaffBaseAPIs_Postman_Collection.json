@@ -10,6 +10,28 @@
 			"item": [
 				{
 					"name": "Get employees",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6e8b60f5-2c09-4d47-bb02-650da4ce2dea",
+								"exec": [
+									"const uuid = pm.require('npm:uuid@13.0.0');\r",
+									"\r",
+									"const id = uuid.v4()\r",
+									"\r",
+									"console.log(id)"
+								],
+								"type": "text/javascript",
+								"packages": {
+									"npm:uuid@13.0.0": {
+										"id": "npm:uuid@13.0.0"
+									}
+								},
+								"requests": {}
+							}
+						}
+					],
 					"id": "9a45a3ee-acea-44fe-944f-e177acd84140",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
